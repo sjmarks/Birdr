@@ -6,11 +6,15 @@ Authors@R:
            family = "Marks",
            role = c("aut", "cre"),
            email = "sjmarks@calpoly.edu"),
-      person(given = "Andrew",
+    person(given = "Andrew",
            family = "Frauenpreis",
            role = c("aut"),
-           email = "afrauenp@calpoly.edu")
-           )
+           email = "afrauenp@calpoly.edu"),
+           person(given = "Dylan",
+           family = "Allred",
+           role = "aut"",
+           email = "dallredpr@calpoly.edu"))
+           
 Description: This package helps birders create maps and such from ebird API data.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
