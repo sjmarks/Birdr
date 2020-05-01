@@ -14,7 +14,8 @@ Authors@R:
            family = "Allred",
            role = "aut"",
            email = "dallredpr@calpoly.edu"))
-Description: What the package does (one paragraph).
+           
+Description: This package helps birders create maps and such from ebird API data.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
