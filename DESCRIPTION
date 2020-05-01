@@ -2,11 +2,16 @@ Package: Birdr
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Simon",
+    c(person(given = "Simon",
            family = "Marks",
            role = c("aut", "cre"),
-           email = "sjmarks@calpoly.edu")
-Description: What the package does (one paragraph).
+           email = "sjmarks@calpoly.edu"),
+      person(given = "Andrew",
+           family = "Frauenpreis",
+           role = c("aut"),
+           email = "afrauenp@calpoly.edu")
+           )
+Description: This package helps birders create maps and such from ebird API data.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
