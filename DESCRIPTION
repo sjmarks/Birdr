@@ -2,10 +2,14 @@ Package: Birdr
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Simon",
+    c(person(given = "Simon",
            family = "Marks",
            role = c("aut", "cre"),
-           email = "sjmarks@calpoly.edu")
+           email = "sjmarks@calpoly.edu"),
+           person(given = "Dylan",
+           family = "Allred",
+           role = "aut"",
+           email = "dallredpr@calpoly.edu"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
