@@ -10,7 +10,7 @@ Authors@R:
            family = "Frauenpreis",
            role = c("aut"),
            email = "afrauenp@calpoly.edu"),
-           person(given = "Dylan",
+    person(given = "Dylan",
            family = "Allred",
            role = "aut"",
            email = "dallredpr@calpoly.edu"))
