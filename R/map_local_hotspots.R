@@ -12,8 +12,9 @@
 #' @return countries dataframe
 #'
 #' @importFrom httr GET add_headers
-#' @importFrom jsonlite FromJSON
-#' @importFrom birdr get_local_hotspots
+#' @importFrom jsonlite fromJSON
+#' @importFrom leaflet leaflet
+#' @importFrom leaflet makeIcon
 #'
 #' @export
 map_local_hotspots <- function(latitude, longitude, back = 1, dist = 25, iconwidth = 30, iconheight = 30, key) {
