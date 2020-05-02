@@ -8,11 +8,11 @@ Authors@R:
            email = "sjmarks@calpoly.edu"),
     person(given = "Andrew",
            family = "Frauenpreis",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "afrauenp@calpoly.edu"),
     person(given = "Dylan",
            family = "Allred",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "dallredpr@calpoly.edu")
            )
 Description: This package creates maps and graphics from ebird API data for bird enthusiasts!
