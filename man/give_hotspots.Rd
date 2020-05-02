@@ -15,7 +15,7 @@ give_hotspots(region, back = 1, key)
 \item{key}{The users eBird key}
 }
 \value{
-subregions datafram
+subregions dataframe
 }
 \description{
 Returns dataframe of birding hotspots for a given region. Must enter the regions code for region, for example if you wanted hotspots
