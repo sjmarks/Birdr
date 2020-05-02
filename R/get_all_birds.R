@@ -8,7 +8,7 @@
 #' @importFrom jsonlite FromJSON
 #'
 #' @export
-all_birds <- function(key) {
+get_all_birds <- function(key) {
   url <- "https://api.ebird.org/v2/ref/taxonomy/ebird"
   birds <- GET(url,
                add_headers("x-ebirdapitoken" = key),
