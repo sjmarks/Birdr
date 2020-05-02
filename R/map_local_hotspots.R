@@ -36,4 +36,10 @@ map_local_hotspots <- function(latitude, longitude, back = 1, dist = 25, iconwid
                label = "You are here",
                popup = paste("Latitude: ", as.character(latitude), "<br>", "Longitude: ", as.character(longitude)),
                icon = you_icon)
+  for (i in 1:length(hotspots$locName)){
+    latitude = c(latitude, hotspots$lat[i])
+    longitude = c(longitude, hotspots$lng[i])
+    m <- addPolylines(map = m, lat = ~latitude, lng = ~longitude)
+  }
+  m
 }
