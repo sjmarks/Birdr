@@ -5,7 +5,7 @@
 #' @return countries dataframe
 #'
 #' @importFrom httr GET add_headers
-#' @importFrom jsonlite FromJSON
+#' @importFrom jsonlite fromJSON
 #'
 #' @export
 all_countries <- function(key) {

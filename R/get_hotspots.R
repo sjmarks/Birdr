@@ -5,10 +5,10 @@
 #' @param region The region code for the desired region
 #' @param back How many days back to collect data, default is 1
 #'
-#' @return subregions datafram
+#' @return subregions dataframe
 #'
 #' @importFrom httr GET add_headers
-#' @importFrom jsonlite FromJSON
+#' @importFrom jsonlite fromJSON
 #' @importFrom glue glue
 #'
 #' @export

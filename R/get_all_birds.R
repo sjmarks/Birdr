@@ -2,10 +2,10 @@
 #'
 #' @param key The users eBird key
 #'
-#' @return datafram of all bird name data
+#' @return dataframe of all bird name data
 #'
 #' @importFrom httr GET add_headers
-#' @importFrom jsonlite FromJSON
+#' @importFrom jsonlite fromJSON
 #'
 #' @export
 get_all_birds <- function(key) {
