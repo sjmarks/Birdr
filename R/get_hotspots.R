@@ -12,7 +12,7 @@
 #' @importFrom glue glue
 #'
 #' @export
-give_hotspots <- function(region, back = 1, key) {
+get_hotspots <- function(region, back = 1, key) {
   url <- glue("https://api.ebird.org/v2/ref/hotspot/{region}")
   hotspots <- GET(url,
                  add_headers("x-ebirdapitoken" = key),
