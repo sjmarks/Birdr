@@ -15,7 +15,6 @@ Authors@R:
            role = c("aut", "cre"),
            email = "dallredpr@calpoly.edu")
            )
-           
 Description: This package creates maps and graphics from ebird API data for bird enthusiasts!
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
