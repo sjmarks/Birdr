@@ -9,7 +9,7 @@
 #' @return subregions datafram
 #'
 #' @importFrom httr GET add_headers
-#' @importFrom jsonlite FromJSON
+#' @importFrom jsonlite fromJSON
 #' @importFrom glue glue
 #'
 #' @export

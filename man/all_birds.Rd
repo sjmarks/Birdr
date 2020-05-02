@@ -10,7 +10,7 @@ all_birds(key)
 \item{key}{The users eBird key}
 }
 \value{
-datafram of all bird name data
+dataframe of all bird name data
 }
 \description{
 Returns dataframe of bird name information including common name, scientific name, species code, family name...
