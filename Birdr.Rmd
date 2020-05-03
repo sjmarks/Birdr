@@ -62,7 +62,7 @@ get_notable_obs(region_code = "US-CA-079", ebirdkey = '1ls8sv5baidn', back = 2)
 
 ## Create a chart of recent obs counts for a region
 
-You can create a dot plot showing counts of recent notable birds for a specified region using `get_notable_chart()`
+You can create a dot plot showing counts of recent notable birds for a specified region using `get_notable_chart()`:
 
 ```{r}
 get_notable_chart(region_code = "US-CA-079", ebirdkey = '1ls8sv5baidn', obs_to_plot = 25, back = 15)
