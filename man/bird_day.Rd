@@ -2,19 +2,19 @@
 % Please edit documentation in R/bird_day.R
 \name{bird_day}
 \alias{bird_day}
-\title{Returns dataframe of regions and the birds present on a given day
-Can also give list of all countries if region_type is set to "country"}
+\title{Creates a dataframe of birds spotted on a single day for a region (default United States)
+For specific states or counties use pick_UScode to generate the country ID.}
 \usage{
 bird_day(country = "US", year, month, day, key)
 }
 \arguments{
-\item{country}{two letter country abreviation, default is United States}
+\item{country}{string of country letter abreviation, default is United States}
 
-\item{year}{4 digit year written as a string}
+\item{year}{string of 4 digit year}
 
-\item{month}{month 1-12 written as a string}
+\item{month}{string of month 1-12}
 
-\item{day}{day 1-31 written as a string}
+\item{day}{string of day 1-31}
 
 \item{key}{The users eBird key}
 }
@@ -22,6 +22,9 @@ bird_day(country = "US", year, month, day, key)
 bird_obs dataframe
 }
 \description{
-Returns dataframe of regions and the birds present on a given day
-Can also give list of all countries if region_type is set to "country"
+returns dataframe of all birds spotted on a single day for a region
+}
+\examples{
+dylan_bday <- bird_day(year = "1999", month = "1", day = "28", key = my_birdkey)
+
 }
