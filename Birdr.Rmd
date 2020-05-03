@@ -17,9 +17,9 @@ The goal of Birdr is to retrieve select data from the eBird api and create maps/
 
 You can install the the development version from [GitHub](https://github.com/) with:
 
-```{r}
+```{r eval = FALSE}
 # install.packages("devtools")
-# devtools::install_github("sjmarks/Birdr")
+devtools::install_github("sjmarks/Birdr")
 
 ```
 
@@ -31,7 +31,7 @@ library(Birdr)
 
 Most functions in Birdr require an API key
 
-please obtain a key here before attempting to use the package - (https://ebird.org/api/keygen)
+Please obtain a key here before attempting to use the package - (https://ebird.org/api/keygen)
 
 ## Obtain United States region codes
 
@@ -57,7 +57,7 @@ pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = '1ls8sv
 You can use the function `get_notable_obs()` to retrieve recent notable bird observations from eBird AI for a specified US region:
 
 ```{r}
-get_notable_obs(region_code = "US-CA-079", region = "US-CA-079", ebirdkey = '1ls8sv5baidn', back = 2)
+get_notable_obs(region_code = "US-CA-079", ebirdkey = '1ls8sv5baidn', back = 2)
 ```
 
 ## Create a chart of recent obs counts for a region
