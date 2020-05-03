@@ -1,5 +1,5 @@
 Package: Birdr
-Title: Creates maps and graphics using the ebird API.
+Title: Retieves data from the eBird ApI and creates maps and graphics
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Simon",
@@ -15,7 +15,7 @@ Authors@R:
            role = c("aut"),
            email = "dallredpr@calpoly.edu")
            )
-Description: This package creates maps and graphics from ebird API data for bird enthusiasts!
+Description: This package retrieves data from the eBird API and creates maps/graphics for bird enthusiasts!
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
