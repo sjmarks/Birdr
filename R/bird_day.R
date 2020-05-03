@@ -12,7 +12,7 @@
 #' @return bird_obs dataframe
 #'
 #' @examples
-#' bird_day <- function(year = "1999", month = "1", day = "28", key = my_birdkey)
+#' dylan_bday <- bird_day(year = "1999", month = "1", day = "28", key = my_birdkey)
 #'
 #' @importFrom httr GET add_headers
 #' @importFrom jsonlite fromJSON
@@ -31,4 +31,33 @@ bird_day <- function(country = "US", year, month, day, key ){
     drop_na()
   
 return(bird_obs)
+}
+
+
+#' Creates a leaflet map of birds spotted on a single day for a region 
+#' To be used with bird_day as this function is expecting the data from bird_day 
+#'
+#' @description returns dataframe of all birds spotted on a single day for a region
+#'
+#' @param data a dataframe prepared by bird_day
+#'
+#' @return a leaflet map of birds for a specific day!
+#'
+#' @examples
+#' dylan_bday <- bird_day(year = "1999", month = "1", day = "28", key = my_birdkey)
+#' flock_plot(dylan_bday)
+#'
+#' @importFrom leaflet makeIcon leaflet addTiles addMarkers
+#'
+#' @export
+flock_plot <- function(data) {
+
+bird_icon <- makeIcon(iconUrl = "https://www.stickpng.com/assets/images/584ab28ee583a46e8c837a2f.png", iconWidth = 25, iconHeight = 25)
+
+
+bird_plot <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng = data$lng, lat = data$lat, label = data$comName, popup = paste0("Scientific Name: ", data$sciName, "<br>", "Number Seen: ", data$howMany), icon = bird_icon) %>% addProviderTiles(providers$CartoDB.Positron)
+
+return(bird_plot)
 }
