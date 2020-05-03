@@ -13,8 +13,7 @@
 #'
 #' @importFrom httr GET add_headers
 #' @importFrom jsonlite fromJSON
-#' @importFrom leaflet leaflet
-#' @importFrom leaflet makeIcon
+#' @importFrom leaflet makeIcon leaflet makeIcon addPolylines
 #'
 #' @export
 map_local_hotspots <- function(latitude, longitude, back = 1, dist = 25, iconwidth = 30, iconheight = 30, key) {
@@ -28,19 +27,22 @@ map_local_hotspots <- function(latitude, longitude, back = 1, dist = 25, iconwid
   #MAP#
   m <- leaflet(data = hotspots) %>%
     addTiles() %>%
-    addMarkers(data = hotspots, lat = ~lat, lng = ~lng,
+    addMarkers(data = hotspots,
+               lat = ~lat,
+               lng = ~lng,
                label = paste("Hotspot Name: ", hotspots$locName),
                popup = paste("Latitude: ", as.character(hotspots$lat), "<br>", "Longitude: ", as.character(hotspots$lng), "<br>", "Most Recent Observation: ", hotspots$latestObsDt, "<br>", "Total Species Observed: ", hotspots$numSpeciesAllTime),
                icon = bird_icon)
-  m <- leaflet() %>%
-    addMarkers(lat = latitude, lng = longitude,
-               label = "You are here",
-               popup = paste("Latitude: ", as.character(latitude), "<br>", "Longitude: ", as.character(longitude)),
-               icon = you_icon)
+  m <- addMarkers(map = m,
+                  lat = latitude,
+                  lng = longitude,
+                  label = "You are here",
+                  popup = paste("Latitude: ", as.character(latitude), "<br>", "Longitude: ", as.character(longitude)),
+                  icon = you_icon)
   for (i in 1:length(hotspots$locName)){
-    latitude = c(latitude, hotspots$lat[i])
-    longitude = c(longitude, hotspots$lng[i])
-    m <- addPolylines(map = m, lat = ~latitude, lng = ~longitude)
+    map_latitude = c(latitude, hotspots$lat[i])
+    map_longitude = c(longitude, hotspots$lng[i])
+    m <- addPolylines(map = m, lat = ~map_latitude, lng = ~map_longitude)
   }
   m
 }
