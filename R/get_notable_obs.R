@@ -22,6 +22,14 @@
 get_notable_obs <- function(region_code, ebirdkey, back = 14, hotspot = FALSE,
                             includeProvisonal = FALSE, maxResults = 10000) {
 
+  if(!back %in% 1:30){
+    stop("Invalid number of days back to fetch observations, must be value 1-30")
+  }
+
+  if(!maxResults %in% 1:10000){
+    stop("Invalid number of observations, must be value 1-10000")
+  }
+
   states_parsed <- ebird_api(path = "/v2/ref/region/list/subnational1/US.json",
                                ebirdkey = ebirdkey)
 
@@ -38,14 +46,6 @@ get_notable_obs <- function(region_code, ebirdkey, back = 14, hotspot = FALSE,
 
   if(!region_code %in% states_vector && !region_code %in% counties_vector){
     stop("Invalid region code supplied. Consult pick_UScode()")
-  }
-
-  if(!back %in% 1:30){
-    stop("Invalid number of days back to fetch observations, must be value 1-30")
-  }
-
-  if(!maxResults %in% 1:10000){
-    stop("Invalid number of observations, must be value 1-10000")
   }
 
   if (hotspot == FALSE){
