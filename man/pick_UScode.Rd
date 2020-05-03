@@ -23,6 +23,6 @@ Determines subnational1 and subnational2 region codes for United States from ebi
 Some counties will result in a return of multiple subnational2 ebird region codes because there are different counties with the same name.
 }
 \examples{
-pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = 'mykey'))
+pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = 'mykey')
 
 }
