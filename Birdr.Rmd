@@ -1,0 +1,70 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Birdr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of Birdr is to retrieve select data from the eBird api and create maps/graphics that could be useful to birders in the United States
+
+## Installation
+
+You can install the the development version from [GitHub](https://github.com/) with:
+
+```{r eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("sjmarks/Birdr")
+
+```
+
+```{r}
+library(Birdr)
+```
+
+## eBird keys
+
+Most functions in Birdr require an API key
+
+Please obtain a key here before attempting to use the package - (https://ebird.org/api/keygen)
+
+## Obtain United States region codes
+
+Certain functions in Birdr require you to specify a region in the US to look at/visualize data from
+
+You can use the function `pick_UScode()` to determine what you need to input for region specifying arguments.
+
+The function returns a subnational1 regional code for the US by sepcifying the state of interest:
+
+```{r}
+pick_UScode(state = "California", ebirdkey = '1ls8sv5baidn')
+```
+
+OR a subnational2 regional code for the US if a county name is supplied:
+
+```{r}
+pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = '1ls8sv5baidn')
+```
+
+
+## GET recent notable obs for a region
+
+You can use the function `get_notable_obs()` to retrieve recent notable bird observations from eBird AI for a specified US region:
+
+```{r}
+get_notable_obs(region_code = "US-CA-079", ebirdkey = '1ls8sv5baidn', back = 2)
+```
+
+## Create a chart of recent obs counts for a region
+
+You can create a dot plot showing counts of recent notable birds for a specified region using `get_notable_chart()`:
+
+```{r}
+get_notable_chart(region_code = "US-CA-079", ebirdkey = '1ls8sv5baidn', obs_to_plot = 25, back = 15)
+```
+
