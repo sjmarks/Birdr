@@ -1,13 +1,13 @@
-#' Creates tibble of recent notable bird observations for supplied United States region from ebird API
+#' Creates tibble of recent notable bird observations for specified region within the United States
 #'
-#' @description Creates tibble of recent notable bird observations for a region using a United States subnational1 or subnational2 region code
+#' @description Creates tibble of recent notable bird observations for specified region within the United States using a subnational1 or subnational2 region code. Accesses data from ebird API.
 #'
 #' @param region_code United States subnational1 or subnational2 region code
 #' @param ebirdkey User ebird key
-#' @param back The number of days back to fetch observations
-#' @param hotspot Only fetch observations from hotspots
-#' @param includeProvisional Include observations which have not yet been reviewed
-#' @param maxResults Only fetch this number of observations
+#' @param back The number of days back to fetch observations, max is 30
+#' @param hotspot Only fetch observations from hotspots- logical
+#' @param includeProvisional Include observations which have not yet been reviewed- logical
+#' @param maxResults Only fetch this number of observations, max is 10000
 #'
 #' @return Tibble of recent notable bird observations ordered from most to least recent for the specified number of days back to collect records
 #'
