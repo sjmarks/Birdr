@@ -64,7 +64,7 @@ pick_UScode <- function(state, county = NULL, ebirdkey){
 #'
 #' @author Simon Marks
 #'
-#' @importFrom httr GET add_headers modify_url http_type
+#' @importFrom httr GET add_headers modify_url http_type content status_code
 ebird_api <- function(path, ebirdkey, query = NULL) {
 
   url <- modify_url('https://api.ebird.org', path = path)
