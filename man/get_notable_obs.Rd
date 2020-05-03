@@ -39,3 +39,6 @@ Use pick_UScode() to determine region code for region_code argument
 get_notable_obs(region = "US-CA-079", ebirdkey = 'mykey', back = 15)
 
 }
+\author{
+Simon Marks
+}

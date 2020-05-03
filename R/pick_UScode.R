@@ -1,4 +1,4 @@
-#' Determines subnational1 and subnational2 region codes for United States from ebird API
+#' Determines subnational1 and subnational2 region codes for United States
 #'
 #' @description Determines subnational1 and subnational2 region codes for United States from ebird API, useful for deciding region arguments in some Birdr functions
 #'
@@ -12,6 +12,8 @@
 #' pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = 'mykey')
 #'
 #' @note Some counties will result in a return of multiple subnational2 ebird region codes because there are different counties with the same name.
+#'
+#' @author Simon Marks
 #'
 #' @importFrom dplyr filter
 #'
@@ -60,6 +62,8 @@ pick_UScode <- function(state, county = NULL, ebirdkey){
 #'
 #' @return A list containing content, path, and response
 #'
+#' @author Simon Marks
+#'
 #' @importFrom httr GET add_headers modify_url http_type
 ebird_api <- function(path, ebirdkey, query = NULL) {
 
@@ -102,6 +106,8 @@ ebird_api <- function(path, ebirdkey, query = NULL) {
 #'
 #' @return A tibble of ebird data
 #'
+#' @author Simon Marks
+#'
 #' @importFrom purrr pluck
 #' @importFrom dplyr bind_rows
 clean_ebirdlist <- function(list){
@@ -111,4 +117,3 @@ clean_ebirdlist <- function(list){
   tibble <- bind_rows(content_list)
 
 }
-
