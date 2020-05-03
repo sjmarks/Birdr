@@ -15,3 +15,6 @@ A tibble of ebird data
 \description{
 Helper function to create tibble from ebird JSON parsed content
 }
+\author{
+Simon Marks
+}

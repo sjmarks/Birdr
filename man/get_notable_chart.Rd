@@ -42,3 +42,6 @@ Use pick_UScode() to determine region code for region_code argument
 get_notable_chart(region_code = "US-CA", ebirdkey = 'mykey', obs_to_plot = 25, back = 30)
 
 }
+\author{
+Simon Marks
+}

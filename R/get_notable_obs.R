@@ -16,6 +16,8 @@
 #'
 #' @note Use pick_UScode() to determine region code for region_code argument
 #'
+#' @author Simon Marks
+#'
 #' @importFrom dplyr arrange desc mutate
 #'
 #' @export
@@ -30,6 +32,7 @@ get_notable_obs <- function(region_code, ebirdkey, back = 14, hotspot = FALSE,
     stop("Invalid number of observations, must be value 1-10000")
   }
 
+  # Relies on ebird_api fun and clean_ebirdlist fun as helpers
   states_parsed <- ebird_api(path = "/v2/ref/region/list/subnational1/US.json",
                                ebirdkey = ebirdkey)
 

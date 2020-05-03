@@ -19,3 +19,6 @@ A list containing content, path, and response
 \description{
 Helper function to get content, path, and response from an ebird API request
 }
+\author{
+Simon Marks
+}

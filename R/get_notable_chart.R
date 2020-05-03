@@ -16,6 +16,8 @@
 #' get_notable_chart(region_code = "US-CA", ebirdkey = 'mykey', obs_to_plot = 25, back = 30)
 #'
 #' @note Use pick_UScode() to determine region code for region_code argument
+#'
+#' @author Simon Marks
 
 #' @importFrom rlang .data
 #' @importFrom dplyr mutate case_when arrange desc group_by summarise slice
@@ -31,6 +33,7 @@ get_notable_chart <- function(region_code, ebirdkey, obs_to_plot = 15,
   }
 
 
+  # Relies on get_notable_obs as helpoer function
   notable_data <- get_notable_obs(region_code = region_code, ebirdkey = ebirdkey,
                                    back = back, hotspot = hotspot, includeProvisonal = includeProvisonal,
                                    maxResults = maxResults)

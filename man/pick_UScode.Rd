@@ -2,7 +2,7 @@
 % Please edit documentation in R/pick_UScode.R
 \name{pick_UScode}
 \alias{pick_UScode}
-\title{Determines subnational1 and subnational2 region codes for United States from ebird API}
+\title{Determines subnational1 and subnational2 region codes for United States}
 \usage{
 pick_UScode(state, county = NULL, ebirdkey)
 }
@@ -25,4 +25,7 @@ Some counties will result in a return of multiple subnational2 ebird region code
 \examples{
 pick_UScode(state = "California", county = "San Luis Obispo", ebirdkey = 'mykey')
 
+}
+\author{
+Simon Marks
 }
