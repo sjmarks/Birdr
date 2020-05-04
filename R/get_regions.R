@@ -13,9 +13,8 @@
 #'
 #' @export
 get_regions <- function(region_type, parent_region = "world", key) {
-  stopifnot(region_type %in% c("country", "subnational1", "subnational2"),
-            parent_region %in% c("world", "country", "subnational1"))
-  url <- glue("https://api.ebird.org/v2/ref/region/list/{{region_type}}/{parent_region}")
+  stopifnot(region_type %in% c("country", "subnational1", "subnational2"))
+  url <- glue("https://api.ebird.org/v2/ref/region/list/{region_type}/{parent_region}")
   regions <- GET(url,
                  add_headers("x-ebirdapitoken" = key))
   regions <- fromJSON(rawToChar(regions$content))
