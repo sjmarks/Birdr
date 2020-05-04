@@ -1,9 +1,9 @@
 test_that("get_local_hotspots works for San Luis Obispos latitude and longitude", {
-  correct_result <- "Alice Keck Park"
+  correct_result <- "L1860406"
 
   my_result <- get_local_hotspots(lat = 35.28, lng = -120.65, back = 1, dist = 300, key = "6qqv2oh5smkm")
 
-  expect_true(correct_result %in% my_result)
+  expect_true(correct_result %in% my_result$locId)
 })
 
 test_that("map_local_hotspots works", {
